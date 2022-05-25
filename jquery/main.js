@@ -1,6 +1,11 @@
-import './style.css'
+import './style.css';
+import $ from 'jquery';
 
-document.querySelector('#app').innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+$(function() {
+  console.log('hello');
+  let title = $('<h1>').text('Hello Vite!');
+  let link = $('<a>').text('Documentation')
+    .prop({ href: 'https://vitejs.dev/guide/features.html', target: '_blank' });
+  
+  $('#app').append(title, link);
+});
