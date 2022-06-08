@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ColorButton from './components/ColorButton';
+import ListControl from './components/ListControl';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </a>
       </header>
       <ColorButton colors={['red', 'green', 'blue', 'yellow']}/>
+      <ListControl startingItems={['write code', 'think', 'fix code you wrote']}/>
     </div>
   );
 }

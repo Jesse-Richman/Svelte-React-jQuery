@@ -1,0 +1,12 @@
+div {
+    padding: 4px;
+}
+
+div.container {
+    width: 30%;
+    background-color: lightgray;
+}
+
+div.list select {
+    width: 100%;
+}
