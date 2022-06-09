@@ -1,0 +1,29 @@
+{
+  "name": "svelte-react-jquery",
+  "version": "1.0.0",
+  "description": "Comparison between Svelte, React, and jQuery",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "(cd jquery && npm install) && (cd svelte && npm install) && (cd react-app && npm install)",
+    "start": "concurrently \"cd react-app && npm start\" \"cd svelte && npm run dev -- --port 3001 --open\" \"cd jquery && npm start -- --port 3002 --open\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesse-Richman/Svelte-React-jQuery.git"
+  },
+  "keywords": [
+    "Svelte",
+    "React",
+    "jQuery"
+  ],
+  "author": "Jesse Richman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesse-Richman/Svelte-React-jQuery/issues"
+  },
+  "homepage": "https://github.com/Jesse-Richman/Svelte-React-jQuery#readme",
+  "dependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
