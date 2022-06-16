@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 export default function ColorButton({colors}) {
-    const [color, setColor] = useState('#000000');
+    const [color, setColor] = useState(colors[0]);
 
     const styles = {
         backgroundColor: color,
@@ -9,7 +9,8 @@ export default function ColorButton({colors}) {
     };
 
     let handleClick = () => {
-        setColor(colors[Math.floor(Math.random() * colors.length)]);
+        let i = Math.floor(Math.random() * colors.length);
+        setColor(colors[i]);
     };
 
     return (

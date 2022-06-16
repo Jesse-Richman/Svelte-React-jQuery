@@ -5,10 +5,10 @@ class ColorButton {
         this.root = root;
         this.colors = colors;
         this.btn = $('<button>').text('Click to change color')
-            .on('click', ev => this._handleClick(ev));
+            .on('click', ev => this.handleClick(ev));
         this.root.append(this.btn);
     }
-    _handleClick(ev) {
+    handleClick(ev) {
         ev.preventDefault();
         let i = Math.floor(Math.random() * this.colors.length);
         let color = this.colors[i];
